@@ -1,0 +1,83 @@
+@charset "UTF-8";
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+body {
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  color: #373737;
+  background: #fff;
+}
+
+/* добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */
+header:after, .container:after, footer:after, .widget-posts-list li:after, #subscribe:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url(/assets/fonts/Roboto/);
+}
+body {
+  color: #000;
+  font-family: roboto;
+}
+
+.container {
+  margin: 1px 22px;
+  outline: 1px solid #757575;
+}
+
+.header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+.header a {
+  color: #000;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.6px;
+  letter-spacing: 0.5px;
+}
+.header .header__btn {
+  padding: 15px 44px;
+  background: #FB4B4D;
+  color: #fff;
+}

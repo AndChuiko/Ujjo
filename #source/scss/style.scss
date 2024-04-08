@@ -1,0 +1,42 @@
+@import "nullstyle.scss";
+@font-face {
+    font-family: roboto;
+    src: url(/assets/fonts/Roboto/);
+}
+$color_1:#FB4B4D;
+$color_2:#8B83F6;
+$fs_58:58px;
+$fs_65:65px;
+body {
+    color: #000;
+    font-family: roboto;
+}
+.container {
+    margin: 1px 22px;
+    outline: 1px solid #757575;
+}
+
+.header{
+    ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    a {
+        color: #000;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21.6px;
+        letter-spacing: 0.5px;
+    }
+
+    .header__btn{
+        padding: 15px 44px;
+        background: $color_1;
+        color: #fff;
+    }
+}
