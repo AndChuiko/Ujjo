@@ -1,50 +1,60 @@
 @import "nullstyle.scss";
 @font-face {
-    font-family: roboto;
-    src: url(/assets/fonts/Roboto/);
+  font-family: roboto;
+  src: url(/assets/fonts/Roboto/);
 }
-$color_1:#FB4B4D;
-$color_2:#8B83F6;
-$fs_58:58px;
-$fs_65:65px;
-%tplborder {
-    border : 1px solid #757575;
-}
+$color_1: #fb4b4d;
+$color_2: #8b83f6;
+$fs_58: 58px;
+$fs_65: 65px;
+$bord_1: 0.5px solid #757575;
 body {
-    color: #000;
-    font-family: roboto;
+  color: #000;
+  font-family: roboto;
 }
 .container {
-    margin: 1px 22px;
-    @extend %tplborder
+  margin: 1px 22px;
+  border: $bord_1;
 }
 
-.header{
-    ul{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-bottom: 20px;
-        padding-top: 20px;
-    }
+.header {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
 
-    a {
-        color: #000;
-        font-family: Roboto;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 21.6px;
-        letter-spacing: 0.5px;
-    }
+  a {
+    color: #000;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21.6px;
+    letter-spacing: 0.5px;
+  }
 
-    .header__btn{
-        padding: 15px 44px;
-        background: $color_1;
-        color: #fff;
-    }
+  & &__btn {
+    padding: 15px 44px;
+    background: $color_1;
+    color: #fff;
+  }
 }
+
 .top {
-    .container{
-        display: flex;
-    }
+  .container {
+    display: flex;
+  }
+  .img__logo,
+  .img__mug,
+  .img__hand-sauce {
+    width: 100%;
+    padding: 20px;
+  }
+  .top__image,
+  .top__animation,
+  .top__text {
+    border: $bord_1;
+  }
 }

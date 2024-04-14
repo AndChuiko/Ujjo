@@ -46,10 +46,6 @@ header:after, .container:after, footer:after, .widget-posts-list li:after, #subs
   font-family: roboto;
   src: url(/assets/fonts/Roboto/);
 }
-.container {
-  border: 1px solid #757575;
-}
-
 body {
   color: #000;
   font-family: roboto;
@@ -57,6 +53,7 @@ body {
 
 .container {
   margin: 1px 22px;
+  border: 0.5px solid #757575;
 }
 
 .header ul {
@@ -81,7 +78,7 @@ body {
 }
 .header .header__btn {
   padding: 15px 44px;
-  background: #FB4B4D;
+  background: #fb4b4d;
   color: #fff;
 }
 
@@ -89,4 +86,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.top .img__logo,
+.top .img__mug,
+.top .img__hand-sauce {
+  width: 100%;
+  padding: 20px;
+}
+.top .top__image,
+.top .top__animation,
+.top .top__text {
+  border: 0.5px solid #757575;
 }
