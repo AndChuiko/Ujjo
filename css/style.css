@@ -46,6 +46,10 @@ header:after, .container:after, footer:after, .widget-posts-list li:after, #subs
   font-family: roboto;
   src: url(/assets/fonts/Roboto/);
 }
+.container {
+  border: 1px solid #757575;
+}
+
 body {
   color: #000;
   font-family: roboto;
@@ -53,7 +57,6 @@ body {
 
 .container {
   margin: 1px 22px;
-  outline: 1px solid #757575;
 }
 
 .header ul {
@@ -80,4 +83,10 @@ body {
   padding: 15px 44px;
   background: #FB4B4D;
   color: #fff;
+}
+
+.top .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }

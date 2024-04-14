@@ -7,13 +7,16 @@ $color_1:#FB4B4D;
 $color_2:#8B83F6;
 $fs_58:58px;
 $fs_65:65px;
+%tplborder {
+    border : 1px solid #757575;
+}
 body {
     color: #000;
     font-family: roboto;
 }
 .container {
     margin: 1px 22px;
-    outline: 1px solid #757575;
+    @extend %tplborder
 }
 
 .header{
@@ -38,5 +41,10 @@ body {
         padding: 15px 44px;
         background: $color_1;
         color: #fff;
+    }
+}
+.top {
+    .container{
+        display: flex;
     }
 }
