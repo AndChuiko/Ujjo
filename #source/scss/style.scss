@@ -1,19 +1,23 @@
-@import "nullstyle.scss";
-@font-face {
-  font-family: roboto;
-  src: url(/assets/fonts/Roboto/);
+@import "reset.scss";
+@import "fonts.scss";
+@import "variables.scss";
+
+@keyframes move-linear {
+  from {
+    transform: translateX(-5em);
+  }
+  to {
+    transform: translateX(5em);
+  }
 }
-$color_1: #fb4b4d;
-$color_2: #8b83f6;
-$fs_58: 58px;
-$fs_65: 65px;
-$bord_1: 0.5px solid #757575;
+
 body {
   color: #000;
   font-family: roboto;
 }
+
 .container {
-  margin: 1px 22px;
+  margin: 1px 22px 0px;
   border: $bord_1;
 }
 
@@ -28,11 +32,14 @@ body {
 
   a {
     color: #000;
-    font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
     line-height: 21.6px;
     letter-spacing: 0.5px;
+  }
+
+  a:hover {
+    color: $color_1;
   }
 
   & &__btn {
@@ -40,21 +47,90 @@ body {
     background: $color_1;
     color: #fff;
   }
+
+  & &__btn:hover {
+    background: #fff;
+    border: $bord_1;
+  }
 }
 
 .top {
   .container {
     display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    border-top: none;
+    border-bottom: none;
   }
+
   .img__logo,
   .img__mug,
   .img__hand-sauce {
     width: 100%;
     padding: 20px;
-  }
-  .top__image,
-  .top__animation,
-  .top__text {
     border: $bord_1;
+  }
+
+  .img__logo {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+  }
+
+  .img__mug {
+    border-left: none;
+    border-right: none;
+  }
+
+  .img__hand-sauce {
+    border-right: none;
+  }
+
+  & &__txt_right {
+    border-left: $bord_1;
+  }
+
+  & &__image,
+  & &__text {
+    border: $bord_1;
+  }
+
+  & &__animation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    animation: $animation;
+  }
+
+  & &__animation-txt {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    white-space: nowrap;
+  }
+
+  & &__txt_right {
+    font-size: $fs_58;
+    font-family: roboto;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+
+  & &__left,
+  & &__right {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .img__hand-sauce {
+    height: 100%;
   }
 }
