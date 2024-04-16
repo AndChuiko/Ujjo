@@ -17,6 +17,7 @@ body {
 }
 
 .container {
+  max-width: 1500px;
   margin: 1px 22px 0px;
   border: $bord_1;
 }
@@ -95,25 +96,6 @@ body {
     border: $bord_1;
   }
 
-  & &__animation {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    animation: $animation;
-  }
-
-  & &__animation-txt {
-    font-size: 17px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    text-align: center;
-    padding-right: 20px;
-    padding-left: 20px;
-    white-space: nowrap;
-  }
-
   & &__txt_right {
     font-size: $fs_58;
     font-family: roboto;
@@ -132,5 +114,130 @@ body {
   }
   .img__hand-sauce {
     height: 100%;
+  }
+}
+.animation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  animation: $animation;
+}
+
+.animation-txt {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  white-space: nowrap;
+}
+
+.middle {
+  .container {
+    margin-top: 0px;
+    border-top: none;
+    overflow: hidden;
+  }
+
+  & &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 30px;
+  }
+
+  & &__title-txt {
+    font-family: Roboto;
+    font-size: $fs_65;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+
+  & &__img-scorpion_right {
+    transform: scaleX(-1);
+  }
+
+  & &__cards_left,
+  & &__cards_center,
+  & &__cards_right {
+    background-image: url(/assets/images/bg-yellow.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  & &__cards {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: $bord_1;
+    border-left: none;
+    border-right: none;
+  }
+
+  & &__cards-h4 {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  & &__cards-h3 {
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  & &__cards-img_left,
+  & &__cards-img_center,
+  & &__cards-img_right {
+    padding: 23px;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  & &__cards_center,
+  & &__cards_right {
+  }
+
+  & &__icon-fire_left,
+  & &__icon-fire_right,
+  & &__icon-balefire_left,
+  & &__icon-balefire_right {
+    position: absolute;
+  }
+
+  & &__icon-fire_left {
+    top: 0px;
+    left: 0px;
+  }
+
+  & &__icon-balefire_left,
+  & &__icon-balefire_right {
+    top: 0px;
+    left: -25px;
+  }
+
+  & &__icon-fire_right {
+    top: 0px;
+    right: 0px;
+  }
+
+  & &__img-bottom {
+    padding: 20px;
+    width: 100%;
+  }
+
+  & &__image {
+    border-top: $bord_1;
   }
 }
