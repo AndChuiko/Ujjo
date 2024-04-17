@@ -17,9 +17,9 @@ body {
 }
 
 .container {
-  max-width: 1500px;
   margin: 1px 22px 0px;
   border: $bord_1;
+  overflow: hidden;
 }
 
 .header {
@@ -87,23 +87,13 @@ body {
     border-right: none;
   }
 
-  & &__txt_right {
+  .txt_h2 {
     border-left: $bord_1;
   }
 
   & &__image,
   & &__text {
     border: $bord_1;
-  }
-
-  & &__txt_right {
-    font-size: $fs_58;
-    font-family: roboto;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 15px;
   }
 
   & &__left,
@@ -239,5 +229,94 @@ body {
 
   & &__image {
     border-top: $bord_1;
+  }
+}
+
+.txt_h2 {
+  font-size: $fs_58;
+  font-family: roboto;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+.bottom {
+  .container {
+    margin-top: 0px;
+    position: relative;
+  }
+
+  & &__up {
+    display: flex;
+    justify-content: center;
+  }
+
+  & &__title {
+    display: block;
+    border-right: $bord_1;
+  }
+
+  & &__title-right {
+    background-image: url(/assets/images/bg_bottom.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  & &__p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding-left: 152px;
+    padding-right: 152px;
+    margin-top: 20px;
+    line-height: 24px;
+  }
+
+  & &__title-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .animation_border {
+    border-top: $bord_1;
+    border-bottom: $bord_1;
+  }
+
+  & &__down-img {
+    width: 100%;
+    margin-top: -150px;
+  }
+}
+.footer {
+  .container {
+    margin: 0px 22px;
+    background: #cdfd3b;
+    border-top: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  & &__nav-item {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #000;
+  }
+  a:hover {
+    color: $color_1;
   }
 }
